@@ -29,15 +29,15 @@ const App = () => {
     }
   }
   return (
-    <div className="min-h-screen bg-grayDrk flex justify-center items-center">
+    <div className="min-h-screen bg-grayMd flex justify-center items-center">
       <div className="container">
         {/* WRAP */}
-        <div className="max-w-[600px] rounded-xl bg-gray-700 p-4 capitalize">
+        <div className="max-w-[600px] bg-gray-300 rounded-xl border border-grayMd p-4 capitalize shadow-xl">
           {showMaxMsg && <Message />}
-          <p className="font-bold text-xl text-grayLt">{head}</p>
+          <p className="font-bold text-xl text-grayDrk">{head}</p>
           <p className="text-grayMd text-sm">{desc}</p>
           {/* LENGTH */}
-          <p className="text-grayLt text-sm capitalize mt-6 font-semibold">{`selected interests (${selectedInterests?.length})`}</p>
+          <p className="text-grayDrk text-sm capitalize mt-6 font-semibold">{`selected interests (${selectedInterests?.length})`}</p>
           {/* OPTIONS */}
           <div className="flex flex-wrap gap-2 py-4 max-h-[300px] overflow-auto">
             {interestOpts?.map((interest: string, index: number) => <Interest key={index} label={interest} getInterestFn={() => handleInterest(interest)} selected={selectedInterests?.includes(interest)} />)}
